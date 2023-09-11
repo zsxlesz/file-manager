@@ -1,0 +1,115 @@
+<p-dialog header="Fájlkezelő" [(visible)]="dialogVis" [maximizable]="true" [style]="{width: '50vw', height: '30vw'}">
+
+
+    <div class="search_files" >
+      <i class="pi pi-search search_icon"></i>
+      <form [formGroup]="formGroup">
+        <p-autoComplete formControlName="selectedFile" [suggestions]="filteredFiles" (completeMethod)="filterCountry($event)" field="name"></p-autoComplete>
+      </form>
+    </div>
+    <div class="create_file" >
+      <p-splitButton label="Frissítés" icon="pi pi-refresh" [model]="fileManagerOpt"></p-splitButton>
+    </div>
+  <div class="filemanager_opt" >
+    <i class="pi pi-caret-down" style="margin-right: 10px; cursor: pointer"></i>
+    <i class="pi pi-ellipsis-h" style="cursor: pointer"></i>
+  </div>
+  <div class="libraries" >
+
+    <div class="libraries_title" >
+      <label>Mappák</label>
+    </div>
+
+
+
+        <div class="folder_box">
+          <img src="assets/img/filemanager_pic.png" class="folder_pic">
+          <div class="folder_title" >
+            Táblázatok
+          </div>
+          <div class="folder_open" >
+            Megtekintés
+          </div>
+          <div class="folder_opt" >
+            <i class="pi pi-caret-down" style="margin-right: 10px; cursor: pointer;font-size: 11px;"></i>
+            <i class="pi pi-ellipsis-h" style="cursor: pointer;font-size: 11px;"></i>
+          </div>
+          <div class="loading_line" >
+            <div class="empty_line">
+              <div class="load_line" style="width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="folder_box" style="margin-top: -120px;margin-left: 290px;">
+          <img src="assets/img/filemanager_pic.png" class="folder_pic">
+          <div class="folder_title" >
+            Szövegek
+          </div>
+          <div class="folder_open" >
+            Megtekintés
+          </div>
+          <div class="folder_opt" >
+            <i class="pi pi-caret-down" style="margin-right: 10px; cursor: pointer;font-size: 11px;"></i>
+            <i class="pi pi-ellipsis-h" style="cursor: pointer;font-size: 11px;"></i>
+          </div>
+          <div class="loading_line" >
+            <div class="empty_line">
+              <div class="load_line" style="width: 40%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="folder_box" style="margin-top: -118px;margin-left: 582px;">
+          <img src="assets/img/filemanager_pic.png" class="folder_pic">
+          <div class="folder_title" >
+            Szemetes
+          </div>
+          <div class="folder_open" >
+            Megtekintés
+          </div>
+          <div class="folder_opt" >
+            <i class="pi pi-caret-down" style="margin-right: 10px; cursor: pointer;font-size: 11px;"></i>
+            <i class="pi pi-ellipsis-h" style="cursor: pointer;font-size: 11px;"></i>
+          </div>
+          <div class="loading_line" >
+            <div class="empty_line">
+              <div class="load_line" style="width: 20%;"></div>
+            </div>
+          </div>
+        </div>
+
+
+    <div class="libraries_title">
+      <label>Fájlok - Táblázatok</label>
+    </div>
+
+    <div class="table" >
+      <p-table [value]="files" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Név</th>
+            <th>Módosítás dátuma</th>
+            <th>Méret</th>
+            <th>Módosítás</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.modified }}</td>
+            <td>{{ product.size }}</td>
+            <td>
+              <p-button icon="pi pi-external-link" styleClass="p-button-rounded p-button-success"></p-button>
+              <p-button [style]="{marginLeft: '10px', marginRight: '10px'}" icon="pi pi-pencil" styleClass="p-button-rounded p-button-info"></p-button>
+              <p-button icon="pi pi-trash" styleClass="p-button-rounded p-button-danger"></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+  </div>
+
+
+</p-dialog>

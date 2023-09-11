@@ -1,0 +1,92 @@
+.search_files{
+  margin-top: 18px;
+}
+
+.create_file{
+  position: absolute;
+  right: 100px;
+  top: 95px;
+}
+
+.filemanager_opt{
+  position: absolute;
+  right: 26px;
+  top: 112px;
+}
+
+.libraries{
+  margin-top: 20px;
+}
+
+.folder_box{
+  width: 273px;
+  height: 119px;
+  background-color: #0a203f;
+  border-radius: 20px;
+}
+
+.libraries_title{
+  margin-top: 10px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 31px;
+}
+
+
+.folder_pic{
+  margin-top: 13px;
+  width: 40px;
+  margin-left: 13px;
+}
+
+.folder_title{
+  font-family: var(--font-family);
+  font-weight: bold;
+  margin-left: 66px;
+  margin-top: -44px;
+}
+
+.folder_open{
+  color: gray;
+  font-size: 12px;
+  margin-left: 66px;
+  margin-top: 4px;
+}
+
+.folder_opt{
+  margin-top: -43px;
+  margin-left: 220px;
+}
+
+.empty_line{
+  width: 254px;
+  height: 10px;
+  background: azure;
+  border-radius: 10px;
+}
+
+.loading_line{
+  margin-top: 49px;
+  margin-left: 9px;
+}
+
+.load_line{
+  margin-left:-1px;
+  height: 10px;
+  background: #c2b4fb;
+  border-radius: 10px;
+}
+
+.proba_box{
+  width: 100vw;
+  background: #c2b4fb;
+  height: 20px;
+}
+
+.search_icon{
+  position: absolute;
+  z-index: 1;
+  left: 201px;
+  top: 111px;
+}
